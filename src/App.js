@@ -1,7 +1,10 @@
 import React, {useState, useEffect} from "react";
 import "./App.css";
-import Card from './Components/Card'
-import axios from 'axios'
+import "./Nav.css";
+import Card from './Components/Card';
+import axios from 'axios';
+import Nav from './Components/Nav';
+
 
 
 function App() {
@@ -24,10 +27,8 @@ function App() {
 
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+      <Nav />
+      <styleCard />
       {nasaData.map(card => <Card key={card.title} card={card} />)}
     </div>
   );
